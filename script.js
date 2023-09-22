@@ -263,9 +263,10 @@ function showSKills(){
                 questions=javaQuestions;
                 showQuestion();
             }
-            else if(skill=='C')
+            else if(skill=='C'){
             questions=cQuestions;
             showQuestion();
+            }
             });
     })
 }
