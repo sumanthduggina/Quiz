@@ -244,13 +244,14 @@ const queON= [
        const optionEl = document.getElementById("options");
        const scoreEl = document.getElementById("score");
        const nextEl=document.getElementById("next");
-
+       const disclaimerEl=document.getElementById("disclaimer");
 //   Showing all the skills
 showSKills();
 let questions=null;
 function showSKills(){
     const skills = ["C", "Java", "Javascript","Mysql"];
     questionEl.textContent="Choose the skill you wish to put yourself to the test with.";
+   
     skills.forEach((skill)=>{
         document.getElementById("next").style.display = "none";
         const btn=document.createElement('button');
@@ -258,7 +259,6 @@ function showSKills(){
         optionEl.appendChild(btn);
         btn.addEventListener("click", () => {
             optionEl.textContent = '';
-            
             if(skill=='Java'){
                 questions=javaQuestions;
                 showQuestion();
@@ -271,13 +271,13 @@ function showSKills(){
     })
 }
 
-
-
+    
     // next
     nextEl.addEventListener('click',nextQuestion);
 
       function showQuestion(){
-        
+        disclaimerEl.textContent="The score is increased by 1 for each right response and decreased by 0.25 for each incorrect response. If you are unsure about the precise response, you can skip it by clicking next.";
+ 
          // Destructuring the object
        const{correctAnswer, options, question} = questions[currentQuestion];
   
@@ -301,7 +301,9 @@ function showSKills(){
             }   
            
         scoreEl.textContent = `Score: ${score}/${questions.length}`;
+
         nextQuestion();
+        
             });
         });
     }
@@ -310,10 +312,11 @@ function showSKills(){
      optionEl.textContent = '';
       if(currentQuestion>=10){
         questionEl.textContent = 'Quiz Completed!!';
+        disclaimerEl.textContent='';
         nextEl.remove();
       } 
       else{
-        showQuestion();
+           showQuestion();
       }
   
     }
