@@ -184,57 +184,173 @@ const cQuestions= [
         question: 'Which of the following is not a valid data type in C?',
       },
   ];
-//dummy questions
-const queON= [
+
+//sql qusetions
+const sqlQuestions= [
+  {
+    correctAnswer: 'The process of organizing data in a database efficiently',
+    options: ['The process of organizing data in a database efficiently', 'The process of sorting data in ascending order', 'The process of creating primary keys for all tables', 'The process of adding indexes to all columns in a table'],
+    question:
+      'In SQL, what does the term "Normalization" refer to?',
+  },
+  {
+    correctAnswer: 'A function that operates on each row individually in a result set',
+    options: [
+      'A function that operates on each row individually in a result set',
+      'A function used for sorting rows in a table',
+      'A function that groups rows based on a specified column',
+      ' A function used to update data in a table',
+    ],
+    question:
+      'In SQL, what does the term "window function" refer to?',
+  },
+  {
+    correctAnswer: 'CREATE TABLE',
+    options: [
+      'CREATE INDEX',
+      'CREATE TABLE',
+      'CREATE CONSTRAINT',
+      'CREATE RELATIONSHIP',
+    ],
+    question:
+      'Which SQL statement is used to define constraints that enforce referential integrity between two tables?',
+  },
+  {
+    correctAnswer: 'To check if any rows exist in the result of a subquery',
+    options: [
+      'To check if a table exists in the database',
+      'To determine if a column exists in a table',
+      'To check if any rows exist in the result of a subquery',
+      'To check if a database exists on the server',
+    ],
+    question: 'In SQL, what is the purpose of the "EXISTS" keyword in a subquery?',
+  },
+  {
+    correctAnswer: 'GRANT',
+    options: [
+      'GRANT',
+      'ALLOW',
+      'PERMIT',
+      'AUTHORIZE',
+    ],
+    question:
+      'Which SQL statement is used to grant specific privileges on a database object to a user or role?',
+  },
+  {
+    correctAnswer: 'To insert, update, or delete data in a target table based on the results of a source query',
+    options: [
+      'To merge two or more tables into a single table',
+      'To insert, update, or delete data in a target table based on the results of a source query',
+      'To combine rows from multiple tables into a single result set',
+      'To create a new table by joining two existing tables',
+    ],
+    question: 'What is the purpose of the SQL "MERGE" statement?',
+  },
+  {
+    correctAnswer: 'DROP TABLE',
+    options: [
+      'DROP TABLE',
+      'DELETE TABLE',
+      'REMOVE TABLE',
+      'TRUNCATE TABLE',
+    ],
+    question: 'Which SQL statement is used to remove a table and all of its data from the database permanently?',
+  },
+  {
+    correctAnswer: 'To roll up summary values in a result set, producing subtotals and a grand total',
+    options: [
+      'To roll back changes made to the database',
+      'To roll up summary values in a result set, producing subtotals and a grand total',
+      'To roll over to the next page of query results',
+      'To roll up the scroll bar in a database query tool',
+    ],
+    question: 'What is the purpose of the SQL "ROLLUP" operator in a GROUP BY clause?',
+  },
+  {
+    correctAnswer: 'To conditionally transform data in a query',
+    options: [
+      'To create a new table',
+      'To define a foreign key constraint',
+      'To conditionally transform data in a query',
+      'To define a primary key constraint',
+    ],
+    question: 'In SQL, what is the purpose of the "CASE" statement?',
+  },
+  {
+    correctAnswer: 'To retrieve sensitive information from a database',
+    options: [
+      'To retrieve sensitive information from a database',
+      'To delete all data from a database',
+      'To create new database tables',
+      'To increase the performance of a database',
+    ],
+    question: 'What is the primary purpose of SQL injection attacks?',
+  },
+];
+//JavaScript  questions
+const JavaScriptQuestions= [
     {
-      correctAnswer: 'Three ',
-      options: ['Two', 'Three ', 'Four', 'Five'],
+      correctAnswer: 'To create a new array by applying a function to each item in an existing array',
+      options: ['To iterate over the properties of an object', 'To create a new array by applying a function to each item in an existing array', 'To filter elements from an array based on a condition', 'To remove duplicate items from an array'],
       question:
-        "How many pieces of bun are in a Mcdonald's Big Mac?",
+        "What is the purpose of the JavaScript map function?",
     },
     {
-      correctAnswer: 'L. Frank Baum',
-      options: [
-        'Suzanne Collins',
-        'James Fenimore Cooper',
-        'L. Frank Baum',
-        'Donna Leon',
-      ],
+      correctAnswer: 'null represents the absence of a value assigned intentionally, while undefined represents the absence of a value that has not been assigned.',
+      options: ['They are the same and can be used interchangeably.', 'null represents the absence of a value assigned intentionally, while undefined represents the absence of a value that has not been assigned.', 'null is a number, while undefined is a string.', 'null is a reference error, while undefined is a syntax error.'],
       question:
-        "Which author wrote 'The Wonderful Wizard of Oz'?",
+        "What is the difference between null and undefined in JavaScript?",
     },
     {
-      correctAnswer: 'Atlanta United',
-      options: [
-        'Atlanta United',
-        'Atlanta Impact',
-        'Atlanta Bulls',
-        'Atlanta Stars',
-      ],
+      correctAnswer: '===',
+      options: ['==', '===', '=', '!='],
       question:
-        'Which of these is a soccer team based in Atlanta?',
+        "Which JavaScript operator is used for strict equality (both value and type must match)?",
     },
     {
-      correctAnswer: 'A Nanny',
-      options: [
-        'A Sow',
-        'A Lioness',
-        'A Hen',
-        'A Nanny',
-      ],
-      question: 'A female goat is known as what?',
-    },
-    {
-      correctAnswer: 'P. L. Travers',
-      options: [
-        'J. R. R. Tolkien',
-        'P. L. Travers',
-        'Lewis Carroll',
-        'Enid Blyton',
-      ],
+      correctAnswer: 'To execute a function after a specified delay',
+      options: ['To create a recursive function', 'To execute a function after a specified delay', 'To pause the execution of a function', 'To set the interval for a loop'],
       question:
-        "Which author wrote 'Mary Poppins'?",
+        "What is the purpose of the JavaScript setTimeout function?",
     },
+    {
+      correctAnswer: 'class MyClass {}',
+      options: ['class MyClass = {}', 'function MyClass() {}', 'class MyClass {}', 'prototype MyClass {}'],
+      question:
+        "How do you define a JavaScript class using ES6 syntax?",
+    },
+    {
+      correctAnswer: 'To handle exceptions and errors',
+      options: ['To define a function', 'To declare a variable', 'To handle exceptions and errors', 'To create a loop'],
+      question:
+        "What is the purpose of the JavaScript try...catch statement?",
+    },
+    {
+      correctAnswer: 'pop()',
+      options: ['push()', 'pop()', 'shift()', 'unshift()'],
+      question:
+        "Which JavaScript method is used to remove an item from the end of an array?",
+    },
+    {
+      correctAnswer: 'document.getElementById("myElement").textContent = "New Text";',
+      options: ['document.getElementById("myElement").innerHTML = "New Text";', 'document.getElementById("myElement").textContent = "New Text";', 'document.getElementById("myElement").text = "New Text";', 'document.getElementById("myElement").value = "New Text";'],
+      question:
+        "How can you change the text content of an HTML element with the ID 'myElement' using JavaScript?",
+    },
+    {
+      correctAnswer: 'Create a new HTML element',
+      options: ['Create a new JavaScript function', 'Create a new HTML element', 'Create a new CSS class', 'Create a new JSON object'],
+      question:
+        "What does the document.createElement method in JavaScript allow you to do?",
+    },
+    {
+      correctAnswer: 'appendChild',
+      options: ['appendChild', 'createChild', 'addNode', 'insertChild'],
+      question:
+        "To append a child element to another element in the DOM using JavaScript, which method should you use?",
+    },
+    
+    
   ];
      
       let score=0;
@@ -249,7 +365,7 @@ const queON= [
 showSKills();
 let questions=null;
 function showSKills(){
-    const skills = ["C", "Java", "Javascript","Mysql"];
+    const skills = ["C", "Java", "Javascript","Sql"];
     questionEl.textContent="Choose the skill you wish to put yourself to the test with.";
    
     skills.forEach((skill)=>{
@@ -267,7 +383,16 @@ function showSKills(){
             questions=cQuestions;
             showQuestion();
             }
+            else if(skill=='Sql'){
+              questions=sqlQuestions;
+              showQuestion();
+              }
+              else if(skill=='Javascript'){
+                questions=JavaScriptQuestions;
+                showQuestion();
+                }
             });
+            
     })
 }
 
@@ -301,9 +426,7 @@ function showSKills(){
             }   
            
         scoreEl.textContent = `Score: ${score}/${questions.length}`;
-
         nextQuestion();
-        
             });
         });
     }
